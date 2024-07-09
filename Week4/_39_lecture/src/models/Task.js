@@ -14,11 +14,11 @@ const taskSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    // owner: {
-    //   type: Schema.Types.ObjectId,
-    //   required: true,
-    //   ref: "User",
-    // },
+    owner: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: "User",
+    },
   },
   {
     timestamps: true
@@ -26,4 +26,4 @@ const taskSchema = new Schema(
 );
 
 const taskmodel=model("Task",taskSchema);
-module.exports=taskmodel 
+module.exports=taskmodel
